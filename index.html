@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pharmaceutical Formulation Development Expert</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        header {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            padding: 2rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            transition: opacity 0.3s;
+        }
+
+        nav a:hover {
+            opacity: 0.8;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 6rem 2rem;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            max-width: 800px;
+            margin: 0 auto;
+            opacity: 0.95;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        section {
+            margin-bottom: 4rem;
+        }
+
+        h2 {
+            color: #1e3c72;
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .value-prop {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+
+        .value-prop h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .experience-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .experience-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            border-left: 4px solid #2a5298;
+            transition: transform 0.3s;
+        }
+
+        .experience-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .experience-card h3 {
+            color: #1e3c72;
+            margin-bottom: 0.5rem;
+        }
+
+        .expertise-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .expertise-item {
+            background: linear-gradient(135deg, #e0f7fa 0%, #b2ebf2 100%);
+            padding: 1.5rem;
+            border-radius: 10px;
+            border-left: 4px solid #00796b;
+        }
+
+        .expertise-item h3 {
+            color: #00796b;
+            margin-bottom: 0.5rem;
+            font-size: 1.2rem;
+        }
+
+        .network-section {
+            background: linear-gradient(135deg, #ffeaa7 0%, #fdcb6e 100%);
+            padding: 3rem;
+            border-radius: 10px;
+            margin-top: 2rem;
+        }
+
+        .network-section h3 {
+            color: #d63031;
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .network-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .network-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+
+        .contact-section {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+            border-radius: 10px;
+        }
+
+        .contact-section h2 {
+            color: white;
+        }
+
+        .contact-form {
+            max-width: 600px;
+            margin: 2rem auto;
+            display: grid;
+            gap: 1.5rem;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            text-align: left;
+        }
+
+        .form-group label {
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            padding: 1rem;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        .form-group textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+
+        .btn {
+            background: #f5576c;
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .btn:hover {
+            background: #d63031;
+        }
+
+        footer {
+            background: #1e3c72;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+
+            h2 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Pharma Formulation Expert</div>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#expertise">Expertise</a></li>
+                <li><a href="#network">Network</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <h1>Pharmaceutical Formulation Development Specialist</h1>
+        <p>Bridging Innovation and Industry with 12 Years of Excellence in Drug Development</p>
+    </section>
+
+    <div class="container">
+        <section id="about">
+            <h2>About Me</h2>
+            <div class="about-content">
+                <div>
+                    <p style="font-size: 1.1rem; margin-bottom: 1.5rem;">
+                        With over 12 years of extensive experience in pharmaceutical formulation development, I specialize in tablets, capsules, and oral solutions including cough syrups. My career spans prestigious organizations across international and domestic landscapes, bringing a unique blend of technical expertise and strategic industry connections.
+                    </p>
+                    <p style="font-size: 1.1rem;">
+                        My journey includes 2 years of international experience, working with cutting-edge formulation technologies and regulatory frameworks that meet global pharmaceutical standards.
+                    </p>
+                </div>
+                <div class="value-prop">
+                    <h3>My Unique Value Proposition</h3>
+                    <p>I serve as a strategic bridge connecting pharmaceutical companies' specific formulation requirements with the right raw materials and excipients suppliers. My extensive industry network and technical expertise enable efficient problem-solving, resource matching, and accelerated drug development timelines.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="experience">
+            <h2>Professional Experience</h2>
+            <div class="experience-grid">
+                <div class="experience-card">
+                    <h3>Zhejiang Ausun Pharmaceuticals</h3>
+                    <p><strong>International Experience</strong></p>
+                    <p>Formulation Development Specialist</p>
+                </div>
+                <div class="experience-card">
+                    <h3>Dr. Reddy's Laboratories</h3>
+                    <p>Leading pharmaceutical company</p>
+                    <p>Formulation Development</p>
+                </div>
+                <div class="experience-card">
+                    <h3>MSN Labs</h3>
+                    <p>Pharmaceutical formulation expert</p>
+                    <p>Technology & Development</p>
+                </div>
+                <div class="experience-card">
+                    <h3>Hetero Labs</h3>
+                    <p>Drug development specialist</p>
+                    <p>Formulation Technologies</p>
+                </div>
+                <div class="experience-card">
+                    <h3>Inventia Healthcare</h3>
+                    <p>Pharmaceutical development</p>
+                    <p>Innovation & Scale-up</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="expertise">
+            <h2>Technical Expertise</h2>
+            <div class="expertise-grid">
+                <div class="expertise-item">
+                    <h3>Hot Melt Extrusion</h3>
+                    <p>Advanced processing technology for enhanced bioavailability and modified release formulations.</p>
+                </div>
+                <div class="expertise-item">
+                    <h3>Roller Compaction</h3>
+                    <p>Dry granulation technology for moisture-sensitive and heat-labile compounds.</p>
+                </div>
+                <div class="expertise-item">
+                    <h3>Granulation Techniques</h3>
+                    <p>Wet and dry granulation methods for optimal tablet formulation development.</p>
+                </div>
+                <div class="expertise-item">
+                    <h3>Nano Milling</h3>
+                    <p>Particle size reduction technology for improving dissolution and bioavailability.</p>
+                </div>
+                <div class="expertise-item">
+                    <h3>Oral Solution Preparation</h3>
+                    <p>Expert in cough syrups and liquid dosage forms with stability optimization.</p>
+                </div>
+                <div class="expertise-item">
+                    <h3>Scale-up Operations</h3>
+                    <p>Seamless transition from lab-scale to commercial manufacturing.</p>
+                </div>
+                <div class="expertise-item">
+                    <h3>Technology Transfer</h3>
+                    <p>Efficient transfer of processes between development and manufacturing sites.</p>
+                </div>
+                <div class="expertise-item">
+                    <h3>Regulatory Compliance</h3>
+                    <p>Deep understanding of global regulatory requirements and quality standards.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="network">
+            <h2>Industry Network & Collaborations</h2>
+            <div class="network-section">
+                <h3>Extensive Global Connections</h3>
+                <p style="font-size: 1.1rem; margin-bottom: 2rem;">
+                    My professional network spans across continents and specializations, enabling unparalleled access to expertise and resources in pharmaceutical development.
+                </p>
+                <div class="network-grid">
+                    <div class="network-card">
+                        <h4 style="color: #1e3c72; margin-bottom: 0.5rem;">Senior Industry Experts</h4>
+                        <p>Strong connections with professionals having 30+ years of experience in formulation development, currently working in top-tier organizations including Pfizer and leading pharmaceutical companies across the US and Europe.</p>
+                    </div>
+                    <div class="network-card">
+                        <h4 style="color: #1e3c72; margin-bottom: 0.5rem;">Specialized Expertise Access</h4>
+                        <p>Direct access to specialists in protein and peptide characterization, enabling comprehensive support for biologics and complex formulation projects.</p>
+                    </div>
+                    <div class="network-card">
+                        <h4 style="color: #1e3c72; margin-bottom: 0.5rem;">Supply Chain Integration</h4>
+                        <p>Deep network across the pharmaceutical supply chain, connecting raw material suppliers, excipient manufacturers, and formulation developers for optimal project outcomes.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact-section">
+            <h2>Let's Connect</h2>
+            <p style="font-size: 1.2rem; margin-bottom: 2rem;">
+                Whether you need formulation development expertise, industry connections, or strategic guidance in pharmaceutical development, I'm here to help bridge your requirements with solutions.
+            </p>
+            <div class="contact-form">
+                <div class="form-group">
+                    <label>Name</label>
+                    <input type="text" placeholder="Your Name" required>
+                </div>
+                <div class="form-group">
+                    <label>Email</label>
+                    <input type="email" placeholder="your.email@example.com" required>
+                </div>
+                <div class="form-group">
+                    <label>Organization</label>
+                    <input type="text" placeholder="Your Company/Organization">
+                </div>
+                <div class="form-group">
+                    <label>Message</label>
+                    <textarea placeholder="Tell me about your project or requirements..." required></textarea>
+                </div>
+                <button class="btn" onclick="handleSubmit()">Send Message</button>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Pharmaceutical Formulation Development Expert. All rights reserved.</p>
+        <p style="margin-top: 0.5rem;">Connecting Innovation with Industry Excellence</p>
+    </footer>
+
+    <script>
+        function handleSubmit() {
+            alert('Thank you for your interest! Please note: This is a demo form. To make it functional, you would need to integrate it with an email service or backend system.');
+        }
+
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
